@@ -3,141 +3,513 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Poultry Farm Management</title>
-<link rel="stylesheet" href="style.css">
+<title>Poultry Farm Management System</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI', sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(rgba(4,20,40,0.85),rgba(4,20,40,0.85)),
+url('https://images.unsplash.com/photo-1548550023-2bdb3c5beed7');
+background-size:cover;
+background-attachment:fixed;
+color:white;
+}
+
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+header h1{
+color:#c09b08;
+font-size:26px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:18px;
+font-size:16px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#c09b08;
+}
+
+
+.hero{
+height:85vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+animation:fadeIn 2s ease;
+}
+
+.overlay{
+background:rgba(255,255,255,0.1);
+padding:35px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
+max-width:750px;
+}
+
+.overlay h2{
+font-size:36px;
+font-weight:600;
+margin-bottom:12px;
+line-height:1.3;
+animation:slideDown 1.5s ease, glow 2s infinite alternate;
+}
+
+.overlay p{
+font-size:18px;
+}
+
+.counter-section{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:35px;
+flex-wrap:wrap;
+}
+
+.counter-box{
+background:rgba(255,255,255,0.12);
+padding:20px;
+width:200px;
+border-radius:18px;
+backdrop-filter:blur(8px);
+text-align:center;
+box-shadow:0 6px 18px rgba(0,0,0,0.3);
+}
+
+.counter-box h3{
+font-size:30px;
+color:#f1c40f;
+}
+
+.section{
+padding:45px 20px;
+text-align:center;
+}
+
+.section h2{
+font-size:30px;
+margin-bottom:25px;
+color:#f1c40f;
+}
+
+
+.about-box{
+max-width:850px;
+margin:auto;
+background:rgba(255,255,255,0.12);
+padding:25px;
+border-radius:18px;
+backdrop-filter:blur(8px);
+line-height:1.8;
+font-size:17px;
+}
+
+
+form{
+max-width:420px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:12px;
+background:rgba(255,255,255,0.12);
+padding:22px;
+border-radius:18px;
+backdrop-filter:blur(10px);
+}
+
+select,input,button{
+padding:11px;
+border:none;
+border-radius:8px;
+font-size:15px;
+}
+
+button{
+background:#27ae60;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.04);
+background:#2ecc71;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.card{
+width:260px;
+background:rgba(255,255,255,0.12);
+border-radius:18px;
+overflow:hidden;
+backdrop-filter:blur(8px);
+transition:0.4s;
+box-shadow:0 6px 18px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(241,196,15,0.35);
+}
+
+.card img{
+width:100%;
+height:170px;
+object-fit:cover;
+}
+
+.card h3{
+padding:12px;
+color:#f1c40f;
+}
+
+.card p{
+padding:0 12px 18px;
+line-height:1.6;
+}
+
+.slider{
+width:80%;
+margin:auto;
+overflow:hidden;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.slider-track{
+display:flex;
+width:calc(280px * 8);
+animation:scroll 18s linear infinite;
+}
+
+.slider-track img{
+width:280px;
+height:210px;
+object-fit:cover;
+margin-right:6px;
+border-radius:12px;
+}
+
+.facts{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+padding:20px;
+}
+
+.fact{
+background:rgba(255,255,255,0.12);
+padding:18px;
+border-radius:14px;
+}
+
+
+footer{
+background:#111;
+padding:18px;
+text-align:center;
+margin-top:25px;
+}
+
+
+.hero{
+height:85vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.overlay{
+background:rgba(255,255,255,0.1);
+padding:35px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
+max-width:750px;
+transition:0.3s;
+}
+
+.overlay:hover{
+transform:scale(1.02);
+}
+
+.overlay h2{
+font-size:36px;
+font-weight:600;
+margin-bottom:12px;
+line-height:1.3;
+color:#f1c40f;
+text-shadow:0 0 8px white;
+}
+
+.card{
+width:260px;
+background:rgba(255,255,255,0.12);
+border-radius:18px;
+overflow:hidden;
+backdrop-filter:blur(8px);
+transition:0.3s;
+box-shadow:0 6px 18px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+@keyframes scroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(calc(-280px * 4));}
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes slideDown{
+from{transform:translateY(-25px); opacity:0;}
+to{transform:translateY(0); opacity:1;}
+}
+
+@keyframes glow{
+from{text-shadow:0 0 8px #fff;}
+to{text-shadow:0 0 15px #f1c40f;}
+}
+
+@media(max-width:768px){
+header{
+flex-direction:column;
+}
+
+.overlay h2{
+font-size:28px;
+}
+}
+</style>
 </head>
 <body>
 
 <header>
-    <h1>Poultry Farm Management System</h1>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#modules">Modules</a>
-        <a href="#contact">Contact</a>
-        <a href="#form">Form</a>
-    </nav>
+<h1>Poultry Farm Management</h1>
+<nav>
+<a href="#about">About</a>
+<a href="#modules">Modules</a>
+<a href="#facts">Facts</a>
+<a href="#form">Form</a>
+</nav>
 </header>
 
 <section class="hero">
-    <div class="overlay">
-        <h2>Modern Poultry Farming Practices</h2>
-        <p>Understanding breeds, nutrition, health management and sales in poultry farming.</p>
-    </div>
+<div class="overlay">
+<h2>Smart Poultry Farming for Sustainable Future </h2>
+<p>Improving productivity through scientific health care, nutrition and farm management.</p>
+</div>
+</section>
+
+<section class="counter-section">
+<div class="counter-box">
+<h3>200+</h3>
+<p>Bird Capacity</p>
+</div>
+
+<div class="counter-box">
+<h3>1000+</h3>
+<p>Eggs Daily</p>
+</div>
+
+<div class="counter-box">
+<h3>4</h3>
+<p>Student Modules</p>
+</div>
 </section>
 
 <section id="about" class="section">
-    <h2>About Project</h2>
+<h2>About Project</h2>
+<div class="about-box">
+A poultry farm is an agricultural unit where birds such as chickens, ducks, and other domestic fowl are raised for the production of eggs and meat. Poultry farming plays an important role in food security, employment generation, and the rural economy because it provides a regular source of nutritious protein and income.
 
-    <div class="about-box">
-    <p>
-        A poultry farm is an agricultural unit where birds such as chickens are raised for the production of eggs and meat. It is an important part of the livestock sector and contributes to food supply as well as employment generation in rural and urban areas. Proper poultry farming requires scientific management of feeding, housing, sanitation, and disease control to maintain healthy birds and ensure good productivity. Modern poultry farms use improved equipment for feeding, watering, ventilation, and egg collection. Poultry farming is considered a profitable business because of its fast production cycle and growing market demand.
-    </p>
-    </div>
+Modern poultry farming follows scientific methods of housing, feeding, breeding, sanitation, and disease prevention to improve productivity and maintain bird health. Proper ventilation, balanced nutrition, clean drinking water, and vaccination schedules are essential for successful farm management.
+
+This project explains important poultry farm management practices through different student modules such as breed selection, feeding and nutrition, health care management, and marketing systems. It also includes field visit observations to understand practical farm operations and modern poultry production techniques.
+</div>
+</section>
+
+<section class="section">
+<h2>Farm Gallery</h2>
+<div class="slider">
+<div class="slider-track">
+<img src="https://tse1.mm.bing.net/th/id/OIP.7I_cA5Sp3KlmRNoTdbwddAHaE7?rs=1&pid=ImgDetMain&o=7&rm=3">
+<img src="https://tse2.mm.bing.net/th/id/OIP.Rdf3IS9B1_mlhJ7djvTwrwHaFj?rs=1&pid=ImgDetMain&o=7&rm=3">
+<img src="https://images.pexels.com/photos/1300375/pexels-photo-1300375.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<img src="we.jpeg">
+<img src="https://tse1.mm.bing.net/th/id/OIP.7I_cA5Sp3KlmRNoTdbwddAHaE7?rs=1&pid=ImgDetMain&o=7&rm=3">
+<img src="https://tse2.mm.bing.net/th/id/OIP.Rdf3IS9B1_mlhJ7djvTwrwHaFj?rs=1&pid=ImgDetMain&o=7&rm=3">
+</div>
+</div>
+</section>
+
+<section id="modules" class="section">
+<h2>Project Modules</h2>
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7">
+<h3>Breeds and Breed Selection</h3>
+<p>Study of poultry breeds and selective breeding methods.</p>
+</div>
+
+<div class="card">
+<img src="https://www.poultryworld.net/app/uploads/2021/04/001_52_IMG_pri408341p-848x565.jpg">
+<h3>Feeding and Nutrition</h3>
+<p>Balanced nutrition and feed management systems.</p>
+</div>
+
+<div class="card">
+<img src="https://r2.cdn.yaclass.in/a8e2711a-911b-424a-a146-43a0e107d64e/shutterstock1045916647w672.jpg">
+<h3>Health Management</h3>
+<p>Vaccination and disease prevention strategies.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1506617420156-8e4536971650">
+<h3>Marketing and Sales</h3>
+<p>Distribution and poultry product pricing.</p>
+</div>
+</div>
+</section>
+
+<section id="facts" class="section">
+<h2>Modern Poultry Farming Insights</h2>
+<div class="facts">
+
+<div class="fact">
+🐣 Poultry farming is one of the fastest-growing agricultural sectors and contributes significantly to protein supply worldwide.
+</div>
+
+<div class="fact">
+🥚 A healthy layer bird can produce around 280 to 300 eggs per year under proper management conditions.
+</div>
+
+<div class="fact">
+💉 Regular vaccination and biosecurity measures help prevent major poultry diseases such as Newcastle disease and avian influenza.
+</div>
+
+<div class="fact">
+🌾 Balanced feed containing protein, vitamins, minerals, and energy directly affects bird growth and egg production.
+</div>
+
+<div class="fact">
+🏠 Proper housing with ventilation, lighting, and temperature control improves bird comfort and reduces stress.
+</div>
+
+</div>
 </section>
 
 <section id="form" class="section">
-    <h2>Student Module Form</h2>
+<h2>Student Module Form</h2>
+<form>
+<select id="student" onchange="showModule()">
+<option>Select Student</option>
+<option>Ankush Singh</option>
+<option>Megha Moorkoth</option>
+<option>Aditi Joshi</option>
+<option>Vighnesh Kumbhar</option>
+</select>
 
-    <form>
-        <label>Student Name</label>
-        <select id="student" onchange="showModule()">
-            <option>Select Student</option>
-            <option>Megha</option>
-            <option>Ankush</option>
-            <option>Aditi</option>
-            <option>Vighnesh</option>
-        </select>
-
-        <label>Module Name</label>
-        <input type="text" id="module" readonly>
-
-        <button type="button" onclick="goToPage()">Submit</button>
-    </form>
+<input type="text" id="module" readonly>
+<button type="button" onclick="goToPage()">Submit</button>
+</form>
 </section>
+
+<section class="section">
+<h2>Farm Visit Details</h2>
+<div class="about-box">
+<p>📍 Location: Loni Kalbhor, Pune</p>
+<p>📞 Contact: +91 9403004923</p>
+<p>🎓 Educational Field Visit for Poultry Study</p>
+<p>
+▶ YouTube Channel:
+<a href="https://youtube.com/@saee.agrofarm?si=1phqjERj0AY7Tkhx" target="_blank" style="color:#f1c40f;text-decoration:none;">
+Visit Farm Channel
+</a>
+</p>
+</div>
+</section>
+
+<footer>
+© 2026 Poultry Farm Management Project
+</footer>
 
 <script>
 function showModule() {
-    let student = document.getElementById("student").value;
-    let module = document.getElementById("module");
+let student = document.getElementById("student").value;
+let module = document.getElementById("module");
 
-    if(student === "Megha"){
-        module.value = "Health Management and Disease";
-    }
-    else if(student === "Ankush"){
-        module.value = "Breeds and Breed Selection";
-    }
-    else if(student === "Aditi"){
-        module.value = "Feeding and Nutrition";
-    }
-    else if(student === "Vighnesh"){
-        module.value = "Marketing and Sales";
-    }
-    else{
-        module.value = "";
-    }
+if(student === "Ankush Singh"){
+module.value = "Breeds and Breed Selection";
+}
+else if(student === "Megha Moorkoth"){
+module.value = "Healthcare and Management";
+}
+else if(student === "Aditi Joshi"){
+module.value = "Feeding and Nutrition";
+}
+else if(student === "Vighnesh Kumbhar"){
+module.value = "Marketing and Sales";
+}
+else{
+module.value = "";
+}
 }
 
 function goToPage(){
-    let student = document.getElementById("student").value;
+let student = document.getElementById("student").value;
 
-    if(student === "Megha"){
-        window.location.href = "megha.html";
-    }
-    else if(student === "Ankush"){
-        window.location.href = "ankush.html";
-    }
-    else if(student === "Aditi"){
-        window.location.href = "aditi.html";
-    }
-    else if(student === "Vighnesh"){
-        window.location.href = "vighnesh.html";
-    }
+if(student === "Ankush Singh"){
+window.location.href="ankush.html";
+}
+else if(student === "Megha Moorkoth"){
+window.location.href="megha.html";
+}
+else if(student === "Aditi Joshi"){
+window.location.href="aditi.html";
+}
+else if(student === "Vighnesh Kumbhar"){
+window.location.href="vighnesh.html";
+}
 }
 </script>
 
-<section id="modules" class="section">
-    <h2>Project Modules</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7" alt="breed">
-            <h3>Breeds and Breed Selection</h3>
-            <p>Study of poultry breeds, growth rate, climate suitability and selective breeding techniques.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://www.poultryworld.net/app/uploads/2021/04/001_52_IMG_pri408341p-848x565.jpg" alt="feed">
-            <h3>Feeding and Nutrition</h3>
-            <p>Balanced nutrition, feed types, water management and feeding practices.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://r2.cdn.yaclass.in/a8e2711a-911b-424a-a146-43a0e107d64e/shutterstock1045916647w672.jpg" alt="health">
-            <h3>Health Management</h3>
-            <p>Vaccination, disease prevention, hygiene and veterinary care.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1506617420156-8e4536971650" alt="sales">
-            <h3>Marketing and Sales</h3>
-            <p>Distribution, packaging, pricing and market demand of poultry products.</p>
-        </div>
-
-    </div>
-
-</section>
-<section id="contact" class="section">
-    <h2>Farm Visit Details</h2>
-    <p>Location: Loni Kalbhor, Pune</p>
-    <p>Educational Field Visit for Poultry Study</p>
-    <p>Contact: +91 9403004923</p>
-
-    <p>
-        YouTube Channel:
-        <a href="https://youtube.com/@saee.agrofarm?si=1phqjERj0AY7Tkhx" target="_blank">
-            Visit Farm Channel
-        </a>
-    </p>
-</section>
-
+</body>
+</html>

@@ -1,76 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Feeding and Nutrition</title>
+<meta charset="UTF-8">
+<title>Feed and Nutrition</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #d4fc79, #96e6a1);
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #d4fc79, #96e6a1);
+}
 
-        header {
-            background-color: #006400;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 26px;
-            letter-spacing: 1px;
-        }
+header {
+    background-color: #006400;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 26px;
+}
 
-        .container {
-            width: 80%;
-            margin: 30px auto;
-            background-color: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-        }
+.container {
+    width: 80%;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
 
-        h2 {
-            color: #006400;
-            margin-bottom: 10px;
-        }
+h2 {
+    color: #006400;
+    margin-bottom: 10px;
+}
 
-        p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-            font-size: 16px;
-        }
+p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
+/* IMAGE */
+.img-box {
+    text-align: center;
+    margin: 20px 0;
+}
 
-        th {
-            background-color: #006400;
-            color: white;
-        }
+.img-box img {
+    width: 65%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
 
-        th, td {
-            border: 1px solid #ccc;
-            padding: 12px;
-            text-align: center;
-        }
+.caption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
 
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
 
-        tr:hover {
-            background-color: #d4fc79;
-            transition: 0.3s;
-        }
-        .next-btn {
+th {
+    background-color: #006400;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* PIE */
+.pie-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pie {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #ffcc00 0% 50%,
+        #ff6666 50% 70%,
+        #66ccff 70% 75%,
+        #99ff99 75% 85%,
+        #cc99ff 85% 95%,
+        #cccccc 95% 100%
+    );
+}
+
+/* FLOW */
+.flow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.flow div {
+    background: #e9ffe9;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.arrow {
+    font-size: 20px;
+}
+
+/* INFO BOX */
+.info-box {
+    background: #f0fff0;
+    border-left: 5px solid green;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.next-btn {
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
@@ -83,91 +147,181 @@
         .next-btn:hover {
             background: #A0522D;
         }
+footer {
+    background-color: #006400;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 20px;
+}
+</style>
 
-        footer {
-            background-color: #006400;
-            color: white;
-            text-align: center;
-            padding: 12px;
-            margin-top: 20px;
-        }
-
-    </style>
 </head>
 
 <body>
 
 <header>
-    Feeding and Nutrition - Poultry Farming
+Feed and Nutrition - Poultry Farming
 </header>
 
 <div class="container">
 
-    <h2>Introduction</h2>
-    <p>
-        Feed and nutrition are very important in poultry farming.
-        Proper nutrition helps in growth, egg production, and disease prevention.
-        A balanced diet includes proteins, carbohydrates, fats, vitamins,
-        minerals, and clean water.
-    </p>
+<h2>Introduction</h2>
+<p>
+Feed and nutrition form the backbone of poultry farming, directly influencing growth, egg production, and disease resistance. 
+A balanced diet ensures proper development and improves overall farm productivity.
+</p>
 
-    <h2>Nutritional Table</h2>
+<div class="img-box">
+<img src="poul.jpeg">
+<p class="caption">Poultry birds (chickens and ducks) feeding on balanced diet</p>
+</div>
 
-    <table>
-        <tr>
-            <th>Nutrient</th>
-            <th>Function</th>
-            <th>Sources</th>
-        </tr>
+<h2>Objectives of Proper Nutrition</h2>
+<p>
+Proper nutrition helps in achieving healthy growth, improving egg production, maintaining body weight, and strengthening immunity. 
+It also reduces feed wastage and ensures better economic returns.
+</p>
 
-        <tr>
-            <td>Proteins</td>
-            <td>Growth and repair</td>
-            <td>Soybean, fish meal</td>
-        </tr>
+<h2>Nutritional Requirements</h2>
 
-        <tr>
-            <td>Carbohydrates</td>
-            <td>Energy source</td>
-            <td>Maize, wheat</td>
-        </tr>
+<table>
+<tr>
+<th>Nutrient</th>
+<th>Function</th>
+<th>Sources</th>
+<th>Deficiency Effect</th>
+</tr>
 
-        <tr>
-            <td>Fats</td>
-            <td>Extra energy</td>
-            <td>Oil seeds</td>
-        </tr>
+<tr>
+<td>Proteins</td>
+<td>Growth and repair</td>
+<td>Soybean, fish meal</td>
+<td>Poor growth</td>
+</tr>
 
-        <tr>
-            <td>Vitamins</td>
-            <td>Maintain health</td>
-            <td>Green vegetables</td>
-        </tr>
+<tr>
+<td>Carbohydrates</td>
+<td>Energy source</td>
+<td>Maize, wheat</td>
+<td>Low energy</td>
+</tr>
 
-        <tr>
-            <td>Minerals</td>
-            <td>Bone & eggshell strength</td>
-            <td>Calcium, phosphorus</td>
-        </tr>
+<tr>
+<td>Vitamins</td>
+<td>Immunity</td>
+<td>Vegetables</td>
+<td>Weak immunity</td>
+</tr>
 
-        <tr>
-            <td>Water</td>
-            <td>Essential for digestion</td>
-            <td>Clean water</td>
-        </tr>
-    </table>
+<tr>
+<td>Minerals</td>
+<td>Bone strength</td>
+<td>Calcium</td>
+<td>Weak bones</td>
+</tr>
 
-    <h2>Conclusion</h2>
-    <p>
-        Balanced feed ensures healthy poultry and better production.
-        Proper nutrition management is key to successful poultry farming.
-    </p>
+<tr>
+<td>Water</td>
+<td>Digestion</td>
+<td>Clean water</td>
+<td>Dehydration</td>
+</tr>
 
-     <a href="vighnesh.html" class="next-btn">Next Module ➡️</a>
+</table>
+
+<div class="img-box">
+<img src="feed ing.jpeg">
+<p class="caption">Feed ingredients like maize and grains</p>
+</div>
+
+<h2>Feed Composition</h2>
+
+<div class="pie-container">
+<div class="pie"></div>
+</div>
+
+<p style="text-align:center;">Typical Poultry Feed Composition</p>
+
+<h2>Feeding Stages</h2>
+
+<table>
+<tr>
+<th>Stage</th>
+<th>Age</th>
+<th>Feed Type</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>Starter</td>
+<td>0–6 Weeks</td>
+<td>High protein</td>
+<td>Growth</td>
+</tr>
+
+<tr>
+<td>Grower</td>
+<td>6–20 Weeks</td>
+<td>Balanced feed</td>
+<td>Development</td>
+</tr>
+
+<tr>
+<td>Layer</td>
+<td>20+ Weeks</td>
+<td>Calcium rich</td>
+<td>Egg production</td>
+</tr>
+
+</table>
+
+<div class="img-box">
+<img src="diff birds.jpeg">
+<p class="caption">Different poultry birds including chickens and ducks</p>
+</div>
+
+<h2>Feeding Process</h2>
+
+<div class="flow">
+<div>Feed Selection</div>
+<div class="arrow">→</div>
+<div>Mixing</div>
+<div class="arrow">→</div>
+<div>Feeding</div>
+<div class="arrow">→</div>
+<div>Water</div>
+<div class="arrow">→</div>
+<div>Healthy Birds</div>
+</div>
+
+<div class="img-box">
+<img src="https://images.unsplash.com/photo-1570042225831-d98fa7577f1e">
+<p class="caption">Proper feeding and clean water system</p>
+</div>
+
+<h2>Common Feeding Problems</h2>
+
+<div class="info-box">Overfeeding can reduce egg production.</div>
+<div class="info-box">Underfeeding causes weak growth.</div>
+<div class="info-box">Contaminated feed leads to diseases.</div>
+<div class="info-box">Lack of clean water affects digestion.</div>
+
+<h2>Conclusion</h2>
+
+<p>
+Balanced feeding is essential for maximizing poultry productivity. Proper nutrition improves growth, egg quality, and disease resistance, ensuring better farm performance.
+</p>
+
+<div class="img-box">
+<img src="https://images.unsplash.com/photo-1589923188900-85dae523342b">
+<p class="caption">Healthy poultry producing quality eggs</p>
+</div>
+<a href="vighnesh.html" class="next-btn">Next Module ➡️</a>
 </div>
 
 <footer>
-    © 2026 Poultry Project | Aditi's Module
+© 2026 Poultry Project | Aditi's Module
 </footer>
 
 </body>

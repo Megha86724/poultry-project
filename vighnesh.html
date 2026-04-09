@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sales and Marketing - Poultry Farming</title>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #fddb92, #d1fdff);
+}
+
+header, footer {
+    background:#8b4513;
+    color:white;
+    text-align:center;
+    padding:12px;
+}
+
+.container {
+    width:85%;
+    max-width:1000px;
+    margin:20px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+h2 { color:#8b4513; margin-bottom:10px; }
+
+.cards {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.card {
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    border-left:5px solid #8b4513;
+}
+
+.card:hover { transform:translateY(-5px); }
+
+.flex { display:flex; justify-content:center; }
+
+table {
+    border-collapse:collapse;
+    margin-right:20px;
+}
+
+th,td {
+    padding:10px;
+    border:1px solid #ccc;
+}
+
+th { background:#8b4513; color:white; }
+
+button {
+    padding:8px 15px;
+    background:#8b4513;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+input, select {
+    padding:8px;
+    margin:5px;
+}
+
+/* feedback */
+.feedback {
+    margin-top:20px;
+    background:#f7f7f7;
+    padding:15px;
+    border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+Sales and Marketing - Poultry Farming
+</header>
+
+<div class="container">
+
+<h2>Market Strategies</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Digital Marketing</h3>
+<p>Use WhatsApp, Instagram, Facebook to promote poultry products.</p>
+</div>
+
+<div class="card">
+<h3>Direct Sales</h3>
+<p>Sell directly to customers to increase profit and avoid middlemen.</p>
+</div>
+
+<div class="card">
+<h3>Branding</h3>
+<p>Use packaging with labels, expiry date, and farm name.</p>
+</div>
+
+<div class="card">
+<h3>Technology</h3>
+<p>Use Excel, apps, and UPI for better management.</p>
+</div>
+</div>
+
+<h2>Demand Analysis</h2>
+
+<div class="flex">
+<table>
+<tr><th>Product</th><th>Demand</th></tr>
+<tr><td>Eggs</td><td>High</td></tr>
+<tr><td>Chicken</td><td>Very High</td></tr>
+<tr><td>Manure</td><td>Medium</td></tr>
+</table>
+
+<canvas id="barChart" width="300" height="200"></canvas>
+</div>
+
+<h2>Sales Calculator</h2>
+
+<select id="product">
+<option value="5">Eggs (₹5)</option>
+<option value="250">Chicken (₹250)</option>
+<option value="2">Manure (₹2/kg)</option>
+</select>
+
+<input type="number" id="qty" placeholder="Enter quantity">
+<button onclick="calculate()">Calculate</button>
+
+<p id="result"></p>
+
+<h2>Direct vs Middlemen Profit</h2>
+<button onclick="compare()">Compare Profit</button>
+<p id="compareResult"></p>
+
+<div class="feedback">
+<h2>Customer Feedback</h2>
+
+<input type="text" id="name" placeholder="Your Name"><br>
+<input type="text" id="msg" placeholder="Your Feedback"><br>
+<button onclick="submitFeedback()">Submit</button>
+
+<ul id="feedbackList"></ul>
+</div>
+
+</div>
+
+<footer>
+© 2026 Poultry Project | Advanced Version
+</footer>
+
+<script>
+// BAR CHART
+const ctx = document.getElementById("barChart").getContext("2d");
+const values = [80, 100, 50];
+const labels = ["Eggs","Chicken","Manure"];
+
+values.forEach((val,i)=>{
+    ctx.fillStyle = "#8b4513";
+    ctx.fillRect(i*80+30, 200-val, 40, val);
+    ctx.fillText(labels[i], i*80+30, 190);
+});
+
+// CALCULATOR
+function calculate(){
+    let price = document.getElementById("product").value;
+    let qty = document.getElementById("qty").value;
+
+    if(qty <= 0){
+        alert("Enter valid quantity");
+        return;
+    }
+
+    let total = price * qty;
+    document.getElementById("result").innerText =
+        "Total Income: ₹" + total;
+}
+
+// PROFIT COMPARISON
+function compare(){
+    let direct = 10000;
+    let middlemen = 7000;
+
+    document.getElementById("compareResult").innerText =
+    "Direct Sale Profit: ₹" + direct +
+    " | Middlemen Profit: ₹" + middlemen;
+}
+
+// FEEDBACK SYSTEM
+function submitFeedback(){
+    let name = document.getElementById("name").value;
+    let msg = document.getElementById("msg").value;
+
+    if(name === "" || msg === ""){
+        alert("Fill all fields");
+        return;
+    }
+
+    let li = document.createElement("li");
+    li.innerText = name + ": " + msg;
+
+    document.getElementById("feedbackList").appendChild(li);
+
+    document.getElementById("name").value="";
+    document.getElementById("msg").value="";
+}
+</script>
+
+</body>
+</html>

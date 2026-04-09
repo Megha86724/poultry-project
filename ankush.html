@@ -70,8 +70,42 @@
             background-color: #ffe4b5;
             transition: 0.3s;
         }
+        .bird-cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+margin-top:20px;
+}
 
-        .next-btn {
+.bird-card{
+width:200px;
+background:#fff8dc;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+transition:0.3s;
+text-align:center;
+}
+
+.bird-card:hover{
+transform:translateY(-6px);
+box-shadow:0 8px 18px rgba(0,0,0,0.3);
+}
+
+.bird-card img{
+width:100%;
+height:150px;
+object-fit:cover;
+}
+
+.bird-card h4{
+padding:10px;
+background:#8B4513;
+color:white;
+}
+
+           .next-btn {
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
@@ -144,6 +178,32 @@
         </tr>
     </table>
 <br>
+<h2>Types of Poultry Breeds</h2>
+
+<div class="bird-cards">
+
+<div class="bird-card">
+<img src="https://th.bing.com/th/id/OIP.l4XoNrHwj2ZErvUL_6LzwwHaF_?w=200&h=200&c=10&o=6&dpr=1.5&pid=genserp&rm=2">
+<h4>White Leghorn</h4>
+</div>
+
+<div class="bird-card">
+<img src="https://th.bing.com/th/id/OIP.OxxJWumUFAeZAsrgq9LESgHaEK?w=372&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3">
+<h4>Broiler Chicken</h4>
+</div>
+
+<div class="bird-card">
+<img src="https://th.bing.com/th/id/OIP.Tjf_Uh42rd0tntlT1v8jNgHaHa?w=186&h=186&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3">
+<h4>Rhode Island Red</h4>
+</div>
+
+<div class="bird-card">
+<img src="data:image/webp;base64,UklGRtQPAABXRUJQVlA4IMgPAADQbgCdASpRAQ4BPp1KoE0lpCarozKZaXATiWdt5/+9/f/5x/XEwSvFLHsgQnUn4TwKevXPKd510n/X9W3l8vAg2a+AJCv0jGIzcQ1RcgVPy/UWUQ8l4WTf24/r5crctnEw38tU7CN/o3c/VNo0xHb7giDheIw04c929p1AR+yP/jons0q9R/1XVI1H9bAy1REKF+VWnRTQjzjiQX8EjB106KioVljlZuGPNBw9E5fohx+z8ZyyUsk1HiK0uTrJrWG2Inxr9xofExAck2hiECprX3/oeSxgvQSW5EBC4AJXq6hbfxBeXbR1LVI0updd/hNRLYmNbb+a6rH4gV83tASuz/FkzdvyjBO2WIDcNj6vrBwn24j9L9tv5R/NXA2f5R9QoRLzDF9xNJ5gWjoAgBRE14mOErY9633xXGfr3HmIxrjT7JxSzmK2HFgyD1tWef0M/JPoLJbzczxWB9WacDHnjB7gN72jxMwDtZmnT5kXP/ivoybBtj7u1/Q/Rori8UgNhfgl6o6z3gcr/jznrzcyFSYVJSsn99TGMuA3jk23FrNmE7GCwBOUcbxZ//xtSKvGPWKQUu/CW81qR/Q2O2hSoJL0TJVydUGRiSueh6ahVbDPNPaR/bdMbNiEP/0XKOXNdlMPduVYa5CSPJQBlyBcnUToXblxQSj9E8Phr8y3LsFAvoHtBuoSV9JDepV+A8bv3rnFJW3z6mocPpC3qV57/viGdA0fcPlbzEGYo7RHspR+TJrgAxryEYBIrhINp9PtdoTRef6yC7QBKHgYeJXFjEoZohBv1Zu9R8DWYdDtZw1OgQ7yQIqoe8rWzh/X4WL7gisXEBT3M4MdNpVbbWv2d2yzctOOcMXtHcI054e7J1nnYYTz4E2LF/8spbmL3/5yRbo/dTMPi2n1lApfYg6mnSVgwWaoxuSddwRZyDLQ/4cdK7JL+0EcRpfRSRn2kjRvGtmTqyuIXTZjrbm3UgcsKyixkn5sm/ljZmBly86h9/HjVaQwRjkJxMKI8Bp47NK/IKDkWy+Y5uVb6WuYnGbWKWxN1u3bFF1ZDXSnMpOtW+j0cgNvSlS6SG0QwM7SwcbFYvV+TKeU61HYWYQj9j/onxy5EmS87bCdDqvPB19KgjPjc8zSPUlyF4z3Z+IAQaPACPiOvngJ4GYCYNseugOSU9urmprdfNyx+6aLsb2IAP7uOa5B6tJYU9oPiWsjdrIbtaoy0CXfx9qKt7cuujzRLzEcEMD1+TiK3OqUFtIZVJaKrUTDl5eb1Q7gMlPYPaENJaV9LimajytKAdsoDubs/n/wssTHwUuPBsxAV+XJ3K0DgF791sS6F/enjKOjeMXv8Ow4y9tmpQdOv3YkN0OHTJdN0H/bRlPRjPJj9c1+5N6eG/CDpmC+U9YEjqsaTXH0oFmHAM3CQNmlYn3WHEUjHXVurcAja2GcR/HDzABA7ubiqCh/s9qBrmZwfq+b0CrBJoO0JgqXbKL4MWQc/EMaPO9gAo+boGyOgVUV3H2y2JGVZSz3Zy7Vm2jFiWxxu0DcWKGD5H29+Utr4tzSgtjt40vahxfwdwSA6THyVO1/6WufD0luH0kipv1TD2eAbg2P33ETgHE+XdWKtt/etJ3nqWwvXolX6n8Q/RagxHifl9gS/sV80Z2IzA4mwq44FauPO48P0fLDbtQAzi3WeXWLnZNor88ZECyEBHyvNM5Tk5b4rdtUTCOvN/81UOayAka+5+lPfkHO2wbu4/tanUpxxQgPdKv+XjCazA5ZZfgz6VPKdSmN8x0KU9TI5zhNpiqVxMszMOgyh5mU5xTeTTzAW3o7PJlZTecKvLteU6TVHLtCpUAMPrUy2ffyTixQ10YV9o1jptleHf4MIcpNOOr8415z8AxnZnbUF0o+JOC4DHr3+pZAHou62G/YcNEtRPq29FjsNIz7nUArp0ng+J1Qq6miw30Y5Yaa1qLJEfHBA3thT2PJC4yAlpNwIw4E/iBXT0prcR60mkAtOGId+HR/BukQ7L2qy2VzceBjBOc+Oo3bz118yyEbWh6VVoXsDvSIVQhMvW6JFVWalzXp8Xfjmh7j84KkB5yogpPy672kZcH+EGLA18cQhcybq7fGhheaMeA7lGUfH4kzOzOqSWdqgS9UbsCY5JJDFmWjgjTPEWppf5N6yGggctjWpGryPqZsGxTJKP++84TTLtMsMHjB0HOcI0437WKjC28QjO2f0WXxef3XTBtV2E/lGSF7aDrb1j+szOhB8hjNMLGna/MXeUMyElkoXgLq0Y6fdfK5Lfa36OERK4O9hvQSaJDCyLczfHfnvncYaEY8hjnnoAGB9KMfnfVTLMvDjjpSwbunRp9/u0DlBYptUezE0qk7uRAw5I0PJAEz2Ck7GMC/E7s7vE3RZJf1SWUR/M0rUJVO6n8i7mc0PmSbYEPuoTbwBkDWxiuzvxLZDJzMYo5GaauaNfVVQ0dCkf+Zd9ZgsGTsOrqSfhgzvGoiPyp4KkijiIp6hhW1v/AdSG4FFr95lcdr7xUVARb+rW6vWm2VtjmpyiH2Ggoqd6WuBxyplBwdNnKxEnUmW+0nUdpXkt/s9x/qtEuaIddquAqITEPiBQol8wniN0gYIo4pBIDq5Pv6cxe1hhsJsNekKcMedkTF02nvtPsOdsNGWvSDu8YqTbDeDmkgm05udHJRJXA7CtwInd/2qsXPakvRBSKoUDPPjd2O6r83b9vmIehKpJq3Jssn2qhDYKVlaxPUxzzBGoRTOusMj7wqeKT58dMpkQxCasJ+yiwvmfN3vWG/koDYHobs95SrG5Z16dRZCH+2ZGz4n31mCG5oyS9seouj/lTQbLaerJz/unOMT0RsdTJu0ufpFSP7DF2UE9e/uS1HyQrdndLjhOGKdmoP1DrOTCBCoSSqqonVcMy9o4VIC2amskLr2f58059lJcKBW/Vi5QbZs1m6VwplXfxqMRxCrhtNeDHfFNQ8xUTrDS2Zbgyuh5pbXzKHny81fHWzXmfBi1h4Ya9u2pl82Ycag8tBEDwJfOTTnSVjf1BroPQrSHK04PBX849z9ayfwBYptFkUIdG2ffV8jKcYsmf1wn/IO/U2qhCSqQqbvRBHECCYnK7Ue5H8AFnLLuLady3VT0ONk1s/geDenYzS7VhC0P7yI6amdjoHbdgGerrkCO1z6G5wWBrFkzOLAIE27uJyUFa9SjUrQy4QTJRN2i72Y5Lr3wnpqJEz95OJHeUPtK8AeZl0WsLcUUYc0wcaIwwPuJ5IG4yFT0YI4i9uSnAaWlkgikwW/i+aG3HsEcCCyJJKtp2RRAxXmrX05SVp/8FoNiELhs7YEVkDpDmQtqG2C2RTIiZTanUt7S1IS2j6/es81ll8k9TGksee2Oki1tYqQ+B0Km44Ur/4HSts3YU+zKmOYuH0FjljuWDhxAZLBV45W32TWWu+uNWbkoHHsSyJNJVOBUMZM+U/dZ5XoJpkC6LgT6swix9+ROVn3c6didi77S33VkaFAtxQDO5o6Vp3MYEAS/WHQWkFHUmBi5deU/aGxY0TqNIYTGQYxd4ViKSpDaj+Nb3Qeno60V+fmP6BVGUeVwuZAxB5xUIDXMtcVBvdIMamPevMhnJdd+jiqj768Iy72dp7JXtqeES9NStws23k6sUYzTasPuc4u8P7TgsAmp6egsfUMxjhIYbCH4vimCl+e5OaISLDrCWPpebZuiF6C/AbIGvjuSTw8rsC8wv4RmeNlkR6d2ADNyn1R0U0Rtpbk57Ccdsq4Q7AXOayKkPUHdrFRX24Q2+lEabEsrMWHCks1T1qBvlGwBQ6UKyNgeWUC3hEoyH035VuFasSn+a12F8wr6Hc27eeL2sdEUTccOd/z56RHecjRr+rpiTW0SG7BcwTiTQqQe+b8B7UYEm9LzoDxacufULoeSZ7dZtnbPsNoMvR/yYYsxdPHI1xgG8j6KZFK2x6rUNSdnSTYKhska6R4+ntISwZ37Rr7NOH+4BI6Ya2GURoRqLItet1tY9C456/HdjDfbbY22V2tswN+TLPq8d0YMoEpQRd1CCq9wpucDbwulXZ3aDPcRkRTlbw9QcZPCZTttgPbo15zO34HbtR1FgzNY1NMNg9mEjulbcYZZ0RjlI3DKmSQjwmPZIQBlCueD8RUxA4oLTHxS8aQxEDlKG2S3yFvzlhteVoKqV1oi6cPVvuGc9DkwbQMbqapgD5xvOCow8898m+Ku7J8mk4QLXHKyMhF8Cips7pIKu5GJgFQjrT5YXaXcfZIu4hhAmXJWpXYBC9yJQaRCrAICZZKT8h5NrcaE3Ydl8cp1qG4UhPut4SyE9OM6Lqaq8Ha+WFxTTxiVjznBeua5crMQCZN+1xGec1P6sAA3sw9yvYd+IboKCWAogSE21iqRI4iaxxUFddkwxh6pRpO4mAu57dBWVmhp/V3pw3KPHEmYflFanHvlQXA+ca3VW9oTohmvTQ4g9J5/ELdbPpFa/Xpc2IvfE/hsLM5J8NDNOd/85206ZxyJUNI0Wd2ydegFJAfsETHuNQCW9meET2cPnlpjPJ/bJy3kRTXdrheswY2ayWStxiVlbAyIaCQgRgBNbuILcf3q3pUM2LeLL2ICMxw9OnzI+yr1933zbqs7kMGQFr5ufjASiQz55B7SB8so1LgqpRYT28ZWta5siLoOgPA7dCrB+syP0DTeGBbc+hT8O9voO3QXL45WaSieMgZSKyj3S++okeyRWz8ZCYlTcrfaufD39m6mWbWVMwm0V7FVKEM60yh1FHodvQrVqdTASggoj7El263QhCe2qla/DIspRLiLLdvCdLdeHxWM23HoOC4qAapsxYPuZDhICGPEpo/2ONUTL40QPjLpYgFnAuwyMFza0IgCCI1R1vKIw3G8c6x5GuwTaxlYL0f/A6aSg2Eq6iTr0AH5W8H6MGiSZDt8WZyyyWCO0WVUDOOrH6pounwaKwSfMWaIcIA557KNl/ov2v3UpI6Vi3xfskAWM+S5CSfayiLrJ01bPfgl81dMDivHrC5ikX5UNp5SaLRiO+GmEhiKIqePAnF9z5vxpwyrzkYdGJ/vKTA0u15dhoPWaedbcLiWGrMGqZx8pL5YHHLS3I39fp65AJcoPg0I6DnUZmqxUZymPaojaEDvbTvwtodH0PKonX6tIJSalCvsaulmFpo/9+f7qoQ+aVY2rYF9QWwCLSKYVzHXm1EkukO7pODYmnUTGhSWElAkwqvd+wUIkD8YAAV5hdOljprSzEczjnHEobZICV/HpIdvTIxnfj2unbZPxOo0aXPxJzfdD8kO01S0yeSjQEMEWxFtVOOcHGcXNTLXPC9f3HNwCp2ZgpcoLvRSHqhYJqXX43ScsL2IOe6sM+HsXoViA7zJhzJOmkUEMGwTVaqAAAAA==">
+<h4>Duck</h4>
+</div>
+
+</div>
+<br>
     <h2>Production Analysis by Poultry Breeds</h2>
 
 <p>
@@ -152,6 +212,7 @@
     egg production, while Broiler contributes the most to meat production.
     These differences help farmers choose suitable breeds based on farm goals.
 </p>
+<br>
 <h3>Egg Production Contribution</h3>
 <div style="background:#fdf5e6; padding:20px; border-radius:12px; box-shadow:0 0 10px rgba(0,0,0,0.2); margin-bottom:25px;">
 
@@ -171,6 +232,7 @@
     </div>
 
 </div>
+<br>
 <h3>Meat Production Contribution</h3>
 <div style="background:#fdf5e6; padding:20px; border-radius:12px; box-shadow:0 0 10px rgba(0,0,0,0.2); margin-bottom:25px;">
 
@@ -188,6 +250,63 @@
         </div>
 
     </div>
+    <br>
+<h2>Climate Suitability of Poultry Breeds</h2>
+
+<table>
+    <tr>
+        <th>Breed</th>
+        <th>Suitable Climate</th>
+    </tr>
+
+    <tr>
+        <td>White Leghorn</td>
+        <td>Warm and dry climate</td>
+    </tr>
+
+    <tr>
+        <td>Broiler</td>
+        <td>Controlled moderate climate</td>
+    </tr>
+
+    <tr>
+        <td>Rhode Island Red</td>
+        <td>Adaptable to different climates</td>
+    </tr>
+
+    <tr>
+        <td>Duck</td>
+        <td>Wet and humid climate</td>
+    </tr>
+</table>
+<br>
+<h2>Role of Hatcheries</h2>
+
+<div style="background:#fff8dc; padding:18px; border-radius:12px; box-shadow:0 0 8px rgba(0,0,0,0.2); margin-top:15px; margin-bottom:20px;">
+    <p>
+        Hatcheries play an important role in poultry farming by producing healthy chicks under controlled conditions.
+        Proper temperature, humidity, and egg handling during incubation improve hatchability.
+        Hatcheries help farmers maintain quality breeding stock and reduce disease risk.
+    </p>
+</div>
+<br>
+<h2>Selective Breeding Process</h2>
+
+<div style="display:flex; justify-content:space-between; gap:15px; margin-top:20px; margin-bottom:20px;">
+
+    <div style="background:#ffe4b5; padding:15px; border-radius:10px; width:30%; text-align:center;">
+        Parent Breed Selection
+    </div>
+
+    <div style="background:#ffe4b5; padding:15px; border-radius:10px; width:30%; text-align:center;">
+        Selection of Desired Traits
+    </div>
+
+    <div style="background:#ffe4b5; padding:15px; border-radius:10px; width:30%; text-align:center;">
+        Improved Poultry Breed
+    </div>
+
+</div>
 
 </div>
 
