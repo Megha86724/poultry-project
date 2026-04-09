@@ -3,83 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sales and Marketing - Poultry Farming</title>
+<title>Marketing and Sales</title>
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
-
-body {
-    font-family: Arial;
-    background: linear-gradient(to right, #fddb92, #d1fdff);
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
 }
 
-header, footer {
-    background:#8b4513;
-    color:white;
-    text-align:center;
-    padding:12px;
+body{
+background:linear-gradient(to right,#fddb92,#d1fdff);
 }
 
-.container {
-    width:85%;
-    max-width:1000px;
-    margin:20px auto;
-    background:white;
-    padding:20px;
-    border-radius:10px;
+/* HEADER + FOOTER */
+header,footer{
+background:#5a2d0c;
+color:white;
+text-align:center;
+padding:18px;
+letter-spacing:1px;
 }
 
-h2 { color:#8b4513; margin-bottom:10px; }
-
-.cards {
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
+/* MAIN CONTAINER */
+.container{
+width:90%;
+max-width:1100px;
+margin:20px auto;
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
 
-.card {
-    padding:15px;
-    border-radius:10px;
-    box-shadow:0 4px 8px rgba(0,0,0,0.1);
-    border-left:5px solid #8b4513;
+/* HEADINGS */
+h2{
+color:#5a2d0c;
+margin:20px 0 10px;
+border-bottom:2px solid #eee;
+padding-bottom:5px;
 }
 
-.card:hover { transform:translateY(-5px); }
-
-.flex { display:flex; justify-content:center; }
-
-table {
-    border-collapse:collapse;
-    margin-right:20px;
+/* CARDS GRID */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+margin-top:10px;
 }
 
-th,td {
-    padding:10px;
-    border:1px solid #ccc;
+.card{
+padding:18px;
+border-radius:10px;
+background:#fff8f0;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+border-left:5px solid #5a2d0c;
+transition:0.3s;
 }
 
-th { background:#8b4513; color:white; }
-
-button {
-    padding:8px 15px;
-    background:#8b4513;
-    color:white;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
+.card:hover{
+transform:translateY(-5px);
 }
 
-input, select {
-    padding:8px;
-    margin:5px;
+/* SECTIONS */
+.section{
+background:#f9f9f9;
+padding:18px;
+border-radius:10px;
+margin-top:20px;
+line-height:1.6;
 }
 
-/* feedback */
-.feedback {
-    margin-top:20px;
-    background:#f7f7f7;
-    padding:15px;
-    border-radius:8px;
+/* LIST */
+ul li{
+margin:8px 0;
+}
+
+/* BUTTON */
+button{
+padding:8px 15px;
+background:#5a2d0c;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+transition:0.3s;
+margin-top:5px;
+}
+
+button:hover{
+background:#7a4510;
+}
+
+/* INPUT */
+input,select{
+padding:8px;
+margin:5px 0;
+border-radius:5px;
+border:1px solid #ccc;
+width:200px;
+}
+
+/* ✅ FIXED IMAGE STYLE */
+.img-row{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+}
+
+.img-row img{
+width:100%;
+max-width:350px;
+height:auto;
+display:block;
+border-radius:10px;
+}
+
+/* TREE */
+.tree{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:12px;
+margin-top:10px;
+}
+
+.tree div{
+padding:10px 15px;
+background:#fff;
+border:1px solid #ccc;
+border-radius:8px;
+box-shadow:0 3px 6px rgba(0,0,0,0.1);
+min-width:120px;
+text-align:center;
+}
+
+/* FEEDBACK LIST */
+#feedbackList{
+margin-top:10px;
+padding-left:20px;
 }
 </style>
 </head>
@@ -87,66 +151,137 @@ input, select {
 <body>
 
 <header>
-Sales and Marketing - Poultry Farming
+<h1>Marketing and Sales</h1>
 </header>
 
 <div class="container">
 
+<!-- INTRO -->
+<div class="section">
+<h2>Introduction</h2>
+<p>
+Marketing and sales play a very important role in the poultry business. Marketing helps in promoting products like eggs and chicken, while sales focus on converting customer interest into actual purchases.
+</p>
+<p>
+Field work helps understand market demand and improve decision-making.
+</p>
+</div>
+
+<!-- STRATEGIES -->
 <h2>Market Strategies</h2>
-
 <div class="cards">
-<div class="card">
-<h3>Digital Marketing</h3>
-<p>Use WhatsApp, Instagram, Facebook to promote poultry products.</p>
+<div class="card">Digital marketing increases reach using social media.</div>
+<div class="card">Direct sales give higher profit and better control.</div>
+<div class="card">Branding improves customer trust.</div>
+<div class="card">Technology helps track sales and customers.</div>
 </div>
 
-<div class="card">
-<h3>Direct Sales</h3>
-<p>Sell directly to customers to increase profit and avoid middlemen.</p>
+<!-- IMPORTANCE -->
+<div class="section">
+<h2>Importance of Marketing</h2>
+<ul>
+<li>Increases awareness</li>
+<li>Builds trust</li>
+<li>Improves sales</li>
+<li>Provides feedback</li>
+</ul>
 </div>
 
-<div class="card">
-<h3>Branding</h3>
-<p>Use packaging with labels, expiry date, and farm name.</p>
+<!-- TREE -->
+<div class="section">
+<h2>Marketing Structure</h2>
+<div class="tree">
+<div>Marketing</div>
+<div>Digital</div>
+<div>Direct</div>
+<div>Branding</div>
+<div>Feedback</div>
+</div>
 </div>
 
-<div class="card">
-<h3>Technology</h3>
-<p>Use Excel, apps, and UPI for better management.</p>
-</div>
-</div>
+<!-- ✅ FIXED IMAGE SECTION -->
+<div class="section">
+<h2>Farm & Product Showcase</h2>
 
-<h2>Demand Analysis</h2>
+<div class="img-row">
 
-<div class="flex">
-<table>
-<tr><th>Product</th><th>Demand</th></tr>
-<tr><td>Eggs</td><td>High</td></tr>
-<tr><td>Chicken</td><td>Very High</td></tr>
-<tr><td>Manure</td><td>Medium</td></tr>
-</table>
-
-<canvas id="barChart" width="300" height="200"></canvas>
+<div>
+<img src="https://img.freepik.com/premium-photo/egg-processing-efficient-plant-machinery-fresh-egg-packaging_817921-43052.jpg">
+<p>Egg processing and packaging system.</p>
 </div>
 
+<div>
+<img src="https://media.istockphoto.com/id/1162694613/vector/poultry-farm-isometric-flowchart.jpg?s=170667a&w=0&k=20&c=pq5Nhsf2VbDDt3Uvr1rGDoKrw3gEKnn8nVqxK-IfEE8=">
+<p>Poultry farm system showing equipment and workflow.</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- VALUE -->
+<div class="section">
+<h2>Value Added Products</h2>
+<p>
+Cleaned eggs, processed chicken, and packaging increase product value and profit.
+</p>
+</div>
+
+<!-- CUSTOMER -->
+<div class="section">
+<h2>Customer Types</h2>
+<ul>
+<li>Retail customers</li>
+<li>Hotels & restaurants</li>
+<li>Wholesalers</li>
+</ul>
+</div>
+
+<!-- CALCULATOR -->
+<div class="section">
 <h2>Sales Calculator</h2>
 
 <select id="product">
-<option value="5">Eggs (₹5)</option>
-<option value="250">Chicken (₹250)</option>
-<option value="2">Manure (₹2/kg)</option>
+<option value="5">Eggs ₹5</option>
+<option value="250">Chicken ₹250</option>
+<option value="2">Manure ₹2/kg</option>
 </select>
 
 <input type="number" id="qty" placeholder="Enter quantity">
+<br>
 <button onclick="calculate()">Calculate</button>
 
 <p id="result"></p>
+</div>
 
-<h2>Direct vs Middlemen Profit</h2>
+<!-- PROFIT -->
+<div class="section">
+<h2>Profit Comparison</h2>
 <button onclick="compare()">Compare Profit</button>
 <p id="compareResult"></p>
+</div>
 
-<div class="feedback">
+<!-- DIGITAL -->
+<div class="section">
+<h2>Digital Marketing</h2>
+<p>
+Digital platforms help in promotion, communication, and easy selling.
+</p>
+</div>
+
+<!-- TIPS -->
+<div class="section">
+<h2>Business Tips</h2>
+<p>
+✔ Maintain customer relations<br>
+✔ Use good packaging<br>
+✔ Track sales<br>
+✔ Follow market trends
+</p>
+</div>
+
+<!-- FEEDBACK -->
+<div class="section">
 <h2>Customer Feedback</h2>
 
 <input type="text" id="name" placeholder="Your Name"><br>
@@ -159,64 +294,50 @@ Sales and Marketing - Poultry Farming
 </div>
 
 <footer>
-© 2026 Poultry Project | Advanced Version
+© 2026 Poultry Project | Vighnesh's Module
 </footer>
 
 <script>
-// BAR CHART
-const ctx = document.getElementById("barChart").getContext("2d");
-const values = [80, 100, 50];
-const labels = ["Eggs","Chicken","Manure"];
 
-values.forEach((val,i)=>{
-    ctx.fillStyle = "#8b4513";
-    ctx.fillRect(i*80+30, 200-val, 40, val);
-    ctx.fillText(labels[i], i*80+30, 190);
-});
-
-// CALCULATOR
 function calculate(){
-    let price = document.getElementById("product").value;
-    let qty = document.getElementById("qty").value;
+let price = document.getElementById("product").value;
+let qty = document.getElementById("qty").value;
 
-    if(qty <= 0){
-        alert("Enter valid quantity");
-        return;
-    }
-
-    let total = price * qty;
-    document.getElementById("result").innerText =
-        "Total Income: ₹" + total;
+if(qty <= 0){
+alert("Enter valid quantity");
+return;
 }
 
-// PROFIT COMPARISON
+let total = price * qty;
+document.getElementById("result").innerText = "Total Income: ₹" + total;
+}
+
 function compare(){
-    let direct = 10000;
-    let middlemen = 7000;
+let direct = 10000;
+let middlemen = 7000;
 
-    document.getElementById("compareResult").innerText =
-    "Direct Sale Profit: ₹" + direct +
-    " | Middlemen Profit: ₹" + middlemen;
+document.getElementById("compareResult").innerText =
+"Direct: ₹" + direct + " | Middlemen: ₹" + middlemen;
 }
 
-// FEEDBACK SYSTEM
 function submitFeedback(){
-    let name = document.getElementById("name").value;
-    let msg = document.getElementById("msg").value;
+let name = document.getElementById("name").value;
+let msg = document.getElementById("msg").value;
 
-    if(name === "" || msg === ""){
-        alert("Fill all fields");
-        return;
-    }
-
-    let li = document.createElement("li");
-    li.innerText = name + ": " + msg;
-
-    document.getElementById("feedbackList").appendChild(li);
-
-    document.getElementById("name").value="";
-    document.getElementById("msg").value="";
+if(name === "" || msg === ""){
+alert("Fill all fields");
+return;
 }
+
+let li = document.createElement("li");
+li.innerText = name + ": " + msg;
+
+document.getElementById("feedbackList").appendChild(li);
+
+document.getElementById("name").value="";
+document.getElementById("msg").value="";
+}
+
 </script>
 
 </body>
